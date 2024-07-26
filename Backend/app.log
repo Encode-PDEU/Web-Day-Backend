@@ -1,0 +1,54 @@
+2024-07-26T05:01:48.005Z info: Server started on port 7000
+2024-07-26T05:02:15.001Z info: Server started on port 7000
+2024-07-26T05:02:20.622Z info: Server started on port 7000
+2024-07-26T05:02:24.930Z info: Server started on port 7000
+2024-07-26T05:02:37.588Z info: Server started on port 7000
+2024-07-26T05:02:55.705Z info: Server started on port 7000
+2024-07-26T05:03:00.485Z info: Server started on port 7000
+2024-07-26T05:03:08.028Z info: Server started on port 7000
+2024-07-26T05:03:09.365Z info: Server started on port 7000
+2024-07-26T05:03:13.981Z info: Server started on port 7000
+2024-07-26T05:04:04.135Z info: Server started on port 7000
+2024-07-26T05:04:08.150Z info: Server started on port 7000
+2024-07-26T05:04:12.310Z info: Server started on port 7000
+2024-07-26T05:04:17.930Z info: Server started on port 7000
+2024-07-26T05:04:28.743Z info: Server started on port 7000
+2024-07-26T05:06:00.453Z info: Server started on port 7000
+2024-07-26T05:06:05.036Z info: Server started on port 7000
+2024-07-26T05:06:47.225Z info: Server started on port 7000
+2024-07-26T05:06:59.485Z info: Server started on port 7000
+2024-07-26T05:07:13.634Z info: Server started on port 7000
+2024-07-26T05:07:15.469Z info: Server started on port 7000
+2024-07-26T05:07:16.464Z info: Server started on port 7000
+2024-07-26T05:07:21.580Z info: Server started on port 7000
+2024-07-26T05:07:25.143Z info: MongoDB connected
+2024-07-26T05:07:46.944Z info: Total questions count:
+2024-07-26T05:07:47.042Z error: Error in /random-question endpoint:
+2024-07-26T05:07:47.043Z error: Error in /random-question endpoint:
+2024-07-26T05:09:31.880Z info: Server started on port 7000
+2024-07-26T05:09:34.210Z error: Failed to connect to MongoDB
+2024-07-26T05:09:38.946Z info: Server started on port 7000
+2024-07-26T05:09:39.793Z error: Failed to connect to MongoDB
+2024-07-26T05:09:54.936Z info: Server started on port 7000
+2024-07-26T05:09:57.537Z info: MongoDB connected
+2024-07-26T05:10:01.783Z info: Total questions count:
+2024-07-26T05:10:01.899Z info: Random question:
+2024-07-26T05:10:40.036Z info: Server started on port 7000
+2024-07-26T05:10:43.697Z error: Failed to connect to MongoDB
+2024-07-26T05:10:44.165Z info: Server started on port 7000
+2024-07-26T05:10:45.177Z info: MongoDB connected
+2024-07-26T05:10:46.626Z info: Server started on port 7000
+2024-07-26T05:10:48.820Z info: MongoDB connected
+2024-07-26T05:10:53.869Z info: Server started on port 7000
+2024-07-26T05:10:55.223Z info: MongoDB connected
+2024-07-26T05:10:55.960Z info: Server started on port 7000
+2024-07-26T05:10:56.695Z error: Failed to connect to MongoDB
+2024-07-26T05:11:05.676Z info: Server started on port 7000
+2024-07-26T05:11:06.426Z error: Failed to connect to MongoDB
+2024-07-26T05:11:10.894Z info: Server started on port 7000
+2024-07-26T05:11:11.648Z error: Failed to connect to MongoDB
+2024-07-26T05:11:18.147Z info: Server started on port 7000
+2024-07-26T05:11:21.883Z info: Server started on port 7000
+2024-07-26T05:11:23.986Z info: MongoDB connected
+2024-07-26T05:11:29.030Z info: Total questions count:
+2024-07-26T05:11:29.115Z info: Random question:
