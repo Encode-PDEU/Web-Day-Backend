@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const promClient = require('prom-client');
+const cors = require('cors');
 
 const logger = require('./utils/logger')
 
@@ -11,6 +12,7 @@ connectDB()
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const http = require('http');
 const server = http.createServer(app);
