@@ -73,7 +73,7 @@ const Home = () => {
                 <div className="navbar">
                     <div className="left">
                         <div className="logo">
-                            <img src={Logo} alt="" />
+                            <a href="https://www.instagram.com/encode_pdeu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target='_blank'><img src={Logo} alt="" /></a>
                         </div>
                     </div>
                     <div className="center">
@@ -81,8 +81,8 @@ const Home = () => {
                     </div>
                     <div className="browser-buttons">
                         <span className="button minimize"></span>
-                        <span className="button maximize"></span>
-                        <span className="button close"></span>
+                        <a href="https://chat.whatsapp.com/CbZ618g7HCOCMOgRoV4W8m" target='_blank'><span className="button maximize"></span></a>
+                        <a href="https://www.linkedin.com/company/encode-pdpu/mycompany/" target='_blank'><span className="button close"></span></a>
                     </div>
                 </div>
                 <div className="main">
