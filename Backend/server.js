@@ -22,6 +22,9 @@ server.timeout = 60000;
 const questionRoutes = require('./Routes/questionRoutes');
 app.use('/api', questionRoutes);
 
+const userRoutes = require('./Routes/userRoutes')
+app.use('/api', userRoutes);
+
 const collectDefaultMetrics = promClient.collectDefaultMetrics;
 collectDefaultMetrics({ timeout: 5000 });
 
