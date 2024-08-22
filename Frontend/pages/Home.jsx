@@ -15,13 +15,13 @@ const Home = () => {
     const [score, setScore] = useState(0);
     const [questionIndex, setQuestionIndex] = useState(0);
 
-    // useEffect(() => {
-    //     // Check if the user has already submitted the quiz
-    //     const hasSubmitted = localStorage.getItem('quizSubmitted');
-    //     if (hasSubmitted) {
-    //         setSubmitted(true);
-    //     }
-    // }, []);
+    useEffect(() => {
+        // Check if the user has already submitted the quiz
+        const hasSubmitted = localStorage.getItem('quizSubmitted');
+        if (hasSubmitted) {
+            setSubmitted(true);
+        }
+    }, []);
 
     const fetchQuestions = async () => {
         try {
