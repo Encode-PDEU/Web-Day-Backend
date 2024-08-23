@@ -73,8 +73,8 @@ body, html {
 
 .center {
     background-color: white;
-    width: 800px;
-    padding: 5px 20px;
+    width: 50vw;
+    padding: 1vh 3vw;
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
@@ -82,6 +82,7 @@ body, html {
 
 .center p {
     font-family: "Poppins";
+    font-size: 1.8vw;
 }
 
 .browser-buttons {
@@ -135,9 +136,9 @@ body, html {
 }
 
 .main {
-    padding: 30px;
+    padding: 2vw;
     background-color: white;
-    width: 92%;
+    width: 83vw;
     margin: 20px auto;
     border: 3px solid black;
     display: flex;
@@ -170,7 +171,7 @@ body, html {
 .question-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     width: 100%;
 }
 
@@ -180,26 +181,26 @@ body, html {
 }
 
 .question {
-    font-size: 30px;
+    font-size: 2.5vw;
     font-family: "Poppins";
     background-color: #56c0f0;
     border: 3px solid #224c8d;
-    padding: 30px;
+    padding: 1vw 2vw;
     border-radius: 10px;
 }
 
 .options {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 30px;
+    gap: 20px;
 }
 
 .options button {
-    padding: 15px;
+    padding: 1vw;
     background-color: #56c0f0;
     border: 3px solid #224c8d;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.8vw;
 }
 
 .options button:hover {
@@ -268,6 +269,51 @@ body, html {
     font-weight: 500;
 }
 
+@media(max-width: 720px){
+    .question-container{
+        gap: 15px;
+    }
+
+    .options{
+        gap: 15px;
+    }
+    .options button{
+        font-size: 2vw;
+    }
+    .question{
+        font-size: 3vw;
+    }
+    .center p{
+        font-size: 2vw;
+    }
+    .center{
+        width: 40vw;
+    }
+    .score-display,  .result-container button{
+        padding: 5px;
+    }
+
+    .result-container h2{
+        font-size: 17px;
+    }
+    .score-display h3{
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 480px){
+    .options button{
+        font-size: 2.5vw;
+    }
+    .question{
+        font-size: 3.5vw;
+    }
+    .main{
+        width: 80vw;
+        padding: 4.5vw 2vw;
+    }
+}
+/* 
 @media (max-width: 1110px){
     .center{
         width: 500px;
@@ -351,4 +397,4 @@ body, html {
     .options button{
         font-size: 12px;
     }
-}
+} */

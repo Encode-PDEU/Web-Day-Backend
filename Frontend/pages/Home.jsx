@@ -15,17 +15,17 @@ const Home = () => {
     const [score, setScore] = useState(0);
     const [questionIndex, setQuestionIndex] = useState(0);
 
-    useEffect(() => {
-        // Check if the user has already submitted the quiz
-        const hasSubmitted = localStorage.getItem('quizSubmitted');
-        if (hasSubmitted) {
-            setSubmitted(true);
-        }
-    }, []);
+    // useEffect(() => {
+    //     // Check if the user has already submitted the quiz
+    //     const hasSubmitted = localStorage.getItem('quizSubmitted');
+    //     if (hasSubmitted) {
+    //         setSubmitted(true);
+    //     }
+    // }, []);
 
     const fetchQuestions = async () => {
         try {
-            const response = await fetch('https://web-day-backend.onrender.com/api/all-questions');
+            const response = await fetch('http://localhost:7000/api/all-questions');
             const data = await response.json();
             setQuestions(shuffleArray(data));
         } catch (error) {
@@ -39,7 +39,7 @@ const Home = () => {
 
     const submitAnswer = async (option) => {
         try {
-            const response = await fetch('https://web-day-backend.onrender.com/api/check-answer', {
+            const response = await fetch('http://localhost:7000/api/check-answer', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -87,7 +87,7 @@ const Home = () => {
 
     const handleSubmitQuiz = async () => {
         try {
-            const response = await fetch('https://web-day-backend.onrender.com/api/create', {
+            const response = await fetch('http://localhost:7000/api/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
