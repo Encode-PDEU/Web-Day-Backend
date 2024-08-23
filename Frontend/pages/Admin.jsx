@@ -13,7 +13,7 @@ const Admin = () => {
     };
 
     const handleLogin = () => {
-        if (password === process.env.VITE_ADMIN_PASSWORD) {
+        if (password === import.meta.env.VITE_ADMIN_PASSWORD) {
             setIsAuthenticated(true);
             setError('');
         } else {
