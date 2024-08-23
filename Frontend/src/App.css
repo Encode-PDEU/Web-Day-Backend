@@ -1,222 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-*{
-    margin: 0;
-    padding: 0;
-}
-.home{
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../src/assets/bg.png');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.content{
-    width: 90%;
-    height: 85%;
-    border: 3px solid black;
-    background: linear-gradient(to top right, #ec77ab, #7873f5);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-
-.left p{
-    font-family: "Poppins";
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.left{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.left .logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.left .logo img{
-    width: 30px;
-    border-radius: 50%;
-}
-
-.center{
-    background-color: white;
-    width: 800px;
-    padding: 5px 20px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.center p{
-    font-family: "Poppins";
-}
-
-.browser-buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.browser-buttons .button {
-    width: 15px;
-    height: 15px;
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-}
-
-.browser-buttons .minimize::before,
-.browser-buttons .maximize::before,
-.browser-buttons .close::before {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 2px;
-    background-color: black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.browser-buttons .maximize::before {
-    width: 13px;
-    height: 13px;
-    border: 2px solid black;
-    background-color: transparent;
-}
-
-.browser-buttons .close::before {
-    width: 2px;
-    height: 20px;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.browser-buttons .close::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 20px;
-    background-color: black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.main{
-    padding: 30px;
-    background-color: white;
-    height: 75%;
-    width: 92%;
-    margin: auto auto;
-    border: 3px solid black;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-
-.main h2{
-    font-family: "Poppins";
-    font-weight: 500;
-    text-align: center;
-}
-
-.main .q-button {
-    padding: 10px;
-    background-color: #56c0f0;
-    font-size: 15px;
-    font-family: "Poppins";
-    font-weight: 500;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px grey;
-}
-
-.main .q-button button:hover{
-    transform: scale(1.1);
-}
-
-.question-container{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
-}
-
-.question-container h3{
-    font-family: "Poppins";
-    text-align: center;
-    
-}
-
-.question{
-    font-size: 30px;
-    font-family: "Poppins";
-    background-color: #56c0f0;
-    border: 3px solid #224c8d;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-.options{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 30px;
-   
-}
-
-.options button{
-    padding: 15px;
-    background-color: #56c0f0;
-    border: 3px solid #224c8d;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.options button:hover{
-    background-color: #224c8d;
-    border: 3px solid #56c0f0;
-    color: white;
-}
-
-.modal-text{
-    padding: 30px;
-    color: white;
-}
-
-.modal-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px;
-    
-}
-
-.modal-div p{
-    font-size: 20px;
-    color: white;
-    font-family: "Poppins";
-} */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
@@ -292,8 +73,8 @@ body, html {
 
 .center {
     background-color: white;
-    width: 800px;
-    padding: 5px 20px;
+    width: 50vw;
+    padding: 1vh 3vw;
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
@@ -301,6 +82,7 @@ body, html {
 
 .center p {
     font-family: "Poppins";
+    font-size: 1.8vw;
 }
 
 .browser-buttons {
@@ -354,9 +136,9 @@ body, html {
 }
 
 .main {
-    padding: 30px;
+    padding: 2vw;
     background-color: white;
-    width: 92%;
+    width: 83vw;
     margin: 20px auto;
     border: 3px solid black;
     display: flex;
@@ -389,7 +171,7 @@ body, html {
 .question-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     width: 100%;
 }
 
@@ -399,26 +181,26 @@ body, html {
 }
 
 .question {
-    font-size: 30px;
+    font-size: 2.5vw;
     font-family: "Poppins";
     background-color: #56c0f0;
     border: 3px solid #224c8d;
-    padding: 30px;
+    padding: 1vw 2vw;
     border-radius: 10px;
 }
 
 .options {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 30px;
+    gap: 20px;
 }
 
 .options button {
-    padding: 15px;
+    padding: 1vw;
     background-color: #56c0f0;
     border: 3px solid #224c8d;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.8vw;
 }
 
 .options button:hover {
@@ -446,3 +228,173 @@ body, html {
     color: white;
     font-family: "Poppins";
 }
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form input{
+    padding: 10px;
+    border: 2px solid black;
+    color: black;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-container button{
+    padding: 10px;
+    background-color: #7873f5;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.score-display{
+    background-color: #ec77ab;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.score-display h3{
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+@media(max-width: 720px){
+    .question-container{
+        gap: 15px;
+    }
+
+    .options{
+        gap: 15px;
+    }
+    .options button{
+        font-size: 2vw;
+    }
+    .question{
+        font-size: 3vw;
+    }
+    .center p{
+        font-size: 2vw;
+    }
+    .center{
+        width: 40vw;
+    }
+    .score-display,  .result-container button{
+        padding: 5px;
+    }
+
+    .result-container h2{
+        font-size: 17px;
+    }
+    .score-display h3{
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 480px){
+    .options button{
+        font-size: 2.5vw;
+    }
+    .question{
+        font-size: 3.5vw;
+    }
+    .main{
+        width: 80vw;
+        padding: 4.5vw 2vw;
+    }
+}
+/* 
+@media (max-width: 1110px){
+    .center{
+        width: 500px;
+    }
+}
+
+@media (max-width: 790px){
+    .center{
+        width: 400px;
+    }
+
+    .main{
+        width: 85%;
+    }
+}
+
+@media (max-width: 660px){
+    .center{
+        width: 300px;
+    }
+
+    .main{
+        width: 80%;
+    }
+
+    .question p{
+        font-size: 20px;
+    }
+
+    .options button{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px){
+    .center{
+        width: 280px;
+    }
+    .center p{
+        font-size: 14px;;
+    }
+    .browser-buttons{
+        display: none;
+    }
+    .main{
+        width: 80%;
+    }
+
+    .question{
+        padding: 20px;
+    }
+
+    .question p{
+        font-size: 15px;
+    }
+
+    .options button{
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 380px){
+    .center{
+        width: 230px;
+    }
+    .center p{
+        font-size: 10px;;
+    }
+    .browser-buttons{
+        display: none;
+    }
+    .main{
+        width: 75%;
+    }
+
+    .question p{
+        font-size: 13px;
+    }
+
+    .options button{
+        font-size: 12px;
+    }
+} */
