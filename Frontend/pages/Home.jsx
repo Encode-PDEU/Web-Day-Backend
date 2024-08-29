@@ -174,7 +174,7 @@ const Home = () => {
                             <div className="question"><p>{questions[questionIndex].question}</p></div>
                             <div className="options">
                                 {questions[questionIndex].options.map((option, index) => (
-                                    <button key={index} className="option-button" onClick={() => handleOptionClick(option)}>
+                                    <button key={index} className={selectedOption ? 'option-button option-clicked': 'option-button'} onClick={() => handleOptionClick(option)}>
                                         {option}
                                     </button>
                                 ))}

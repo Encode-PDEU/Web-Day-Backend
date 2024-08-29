@@ -203,11 +203,17 @@ body, html {
     font-size: 1.8vw;
 }
 
+.options .option-clicked{
+    background-color: #6389c2;
+    pointer-events: none;
+}
+
 .options button:hover {
     background-color: #224c8d;
     border: 3px solid #56c0f0;
     color: white;
 }
+
 
 .modal-text {
     padding: 30px;
