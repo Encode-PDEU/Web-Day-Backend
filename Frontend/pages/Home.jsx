@@ -25,7 +25,7 @@ const Home = () => {
 
     const fetchQuestions = async () => {
         try {
-            const response = await fetch('https://web-day-backend.onrender.com/api/all-questions');
+            const response = await fetch('https://encode-intro-backend.vercel.app/api/all-questions');
             const data = await response.json();
             setQuestions(shuffleArray(data));
         } catch (error) {
@@ -39,7 +39,7 @@ const Home = () => {
 
     const submitAnswer = async (option) => {
         try {
-            const response = await fetch('https://web-day-backend.onrender.com/api/check-answer', {
+            const response = await fetch('https://encode-intro-backend.vercel.app/api/check-answer', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -87,7 +87,7 @@ const Home = () => {
 
     const handleSubmitQuiz = async () => {
         try {
-            const response = await fetch('https://web-day-backend.onrender.com/api/create', {
+            const response = await fetch('https://encode-intro-backend.vercel.app/api/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

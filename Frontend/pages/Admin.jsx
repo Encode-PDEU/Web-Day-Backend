@@ -23,7 +23,7 @@ const Admin = () => {
 
     const handleClearUsers = async () => {
         try {
-            await axios.delete('https://web-day-backend.onrender.com/api/clear');
+            await axios.delete('https://encode-intro-backend.vercel.app/api/clear');
             alert('All users cleared successfully.');
             setLeaderboard([]); // Clear leaderboard after users are deleted
         } catch (error) {
@@ -34,7 +34,7 @@ const Admin = () => {
 
     const handleShowLeaderboard = async () => {
         try {
-            const response = await axios.get('https://web-day-backend.onrender.com/api/');
+            const response = await axios.get('https://encode-intro-backend.vercel.app/api/');
             setLeaderboard(response.data.users); // Update state with leaderboard data
         } catch (error) {
             console.error('Error fetching leaderboard:', error);
