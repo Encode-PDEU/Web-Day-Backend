@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../src/Admin.css'; // Import the CSS file for styling
 
@@ -8,6 +8,10 @@ const Admin = () => {
     const [error, setError] = useState('');
     const [leaderboard, setLeaderboard] = useState([]);
     const [LBButtonClicked, setLBButtonClicked] = useState(false);
+
+    useEffect(() => {
+        setLBButtonClicked(false);
+    })
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
