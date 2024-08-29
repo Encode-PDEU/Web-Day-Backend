@@ -28,7 +28,7 @@ const Admin = () => {
 
     const handleClearUsers = async () => {
         try {
-            await axios.delete('https://encode-intro-backend.vercel.app/api/clear');
+            await axios.delete(`${import.meta.env.VITE_BACKEND_ROUTE}/clear`);
             alert('All users cleared successfully.');
             setLeaderboard([]); // Clear leaderboard after users are deleted
             setLBButtonClicked(true);
@@ -40,7 +40,7 @@ const Admin = () => {
 
     const handleShowLeaderboard = async () => {
         try {
-            const response = await axios.get('https://encode-intro-backend.vercel.app/api/');
+            const response = await axios.get(`${import.meta.env.VITE_BACKEND_ROUTE}/`);
             setLeaderboard(response.data.users); // Update state with leaderboard data
             setLBButtonClicked(true);
         } catch (error) {

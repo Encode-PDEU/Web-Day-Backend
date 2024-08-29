@@ -10,7 +10,7 @@ const counter = new promClient.Counter({
 const getAllQuestions = async (req, res) => {
   try {
     const questions = await Question.find();
-    console.log(questions);
+    console.log(questions)
     const count = questions.length;
 
     console.log('Total questions count:', count);
@@ -22,7 +22,13 @@ const getAllQuestions = async (req, res) => {
 
     counter.inc(count); // Increment the counter by the number of questions served
 
-    res.json(questions);
+    const questionsWithoutAnswers = questions.map(({ _id, question, options }) => ({
+      _id,
+      question,
+      options
+    }));
+
+    res.json(questionsWithoutAnswers);
   } catch (err) {
     logger.error('Error in /all-questions endpoint:', err.message);
     res.status(500).send('Server Error');
