@@ -7,6 +7,7 @@ const Admin = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [error, setError] = useState('');
     const [leaderboard, setLeaderboard] = useState([]);
+    const [LBButtonClicked, setLBButtonClicked] = useState(false);
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
@@ -26,6 +27,7 @@ const Admin = () => {
             await axios.delete('https://encode-intro-backend.vercel.app/api/clear');
             alert('All users cleared successfully.');
             setLeaderboard([]); // Clear leaderboard after users are deleted
+            setLBButtonClicked(true);
         } catch (error) {
             console.error('Error clearing users:', error);
             alert('Failed to clear users.');
@@ -62,7 +64,7 @@ const Admin = () => {
                     <button onClick={handleClearUsers} className="action-button clear-button">Clear Users</button>
                     <button onClick={handleShowLeaderboard} className="action-button leaderboard-button">Show Leaderboard</button>
 
-                    {leaderboard.length > 0 ? (
+                    { (LBButtonClicked && leaderboard.length > 0) ? (
                         <div className="leaderboard-table">
                             <h3>Leaderboard</h3>
                             <table>
@@ -84,7 +86,7 @@ const Admin = () => {
                                 </tbody>
                             </table>
                         </div>
-                    ): <h2>No Users yet!</h2>}
+                    ): (<h2>No Users yet!</h2>)}
                 </div>
             )}
         </div>
