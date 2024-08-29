@@ -11,7 +11,7 @@ const Admin = () => {
 
     useEffect(() => {
         setLBButtonClicked(false);
-    })
+    }, []); // Adding an empty dependency array to run the effect only once on mount
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
@@ -42,6 +42,7 @@ const Admin = () => {
         try {
             const response = await axios.get('https://encode-intro-backend.vercel.app/api/');
             setLeaderboard(response.data.users); // Update state with leaderboard data
+            setLBButtonClicked(true);
         } catch (error) {
             console.error('Error fetching leaderboard:', error);
             alert('Failed to fetch leaderboard.');
@@ -68,29 +69,33 @@ const Admin = () => {
                     <button onClick={handleClearUsers} className="action-button clear-button">Clear Users</button>
                     <button onClick={handleShowLeaderboard} className="action-button leaderboard-button">Show Leaderboard</button>
 
-                    { (LBButtonClicked && leaderboard.length > 0) ? (
-                        <div className="leaderboard-table">
-                            <h3>Leaderboard</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Roll Number</th>
-                                        <th>Score</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {leaderboard.map((user, index) => (
-                                        <tr key={index}>
-                                            <td>{user.name}</td>
-                                            <td>{user.rollNo}</td>
-                                            <td>{user.score}</td>
+                    {LBButtonClicked && (
+                        leaderboard.length > 0 ? (
+                            <div className="leaderboard-table">
+                                <h3>Leaderboard</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll Number</th>
+                                            <th>Score</th>
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                    ): (<h2>No Users yet!</h2>)}
+                                    </thead>
+                                    <tbody>
+                                        {leaderboard.map((user, index) => (
+                                            <tr key={index}>
+                                                <td>{user.name}</td>
+                                                <td>{user.rollNo}</td>
+                                                <td>{user.score}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        ) : (
+                            <h2>No Users Yet!</h2>
+                        )
+                    )}
                 </div>
             )}
         </div>
