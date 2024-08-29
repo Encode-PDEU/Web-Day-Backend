@@ -62,7 +62,7 @@ const Admin = () => {
                     <button onClick={handleClearUsers} className="action-button clear-button">Clear Users</button>
                     <button onClick={handleShowLeaderboard} className="action-button leaderboard-button">Show Leaderboard</button>
 
-                    {leaderboard.length > 0 && (
+                    {leaderboard.length > 0 ? (
                         <div className="leaderboard-table">
                             <h3>Leaderboard</h3>
                             <table>
@@ -84,7 +84,7 @@ const Admin = () => {
                                 </tbody>
                             </table>
                         </div>
-                    )}
+                    ): <h2>No Users yet!</h2>}
                 </div>
             )}
         </div>
