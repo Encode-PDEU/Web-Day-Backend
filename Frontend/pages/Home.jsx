@@ -14,6 +14,7 @@ const Home = () => {
     const [rollNumber, setRollNumber] = useState('');
     const [score, setScore] = useState(0);
     const [questionIndex, setQuestionIndex] = useState(0);
+    const backendRoute = import.meta.env.VITE_BACKEND_ROUTE;
 
     useEffect(() => {
         // Check if the user has already submitted the quiz
@@ -25,7 +26,7 @@ const Home = () => {
 
     const fetchQuestions = async () => {
         try {
-            const response = await fetch(`${import.meta.env.VITE_BACKEND_ROUTE}/all-questions`);
+            const response = await fetch(`${backendRoute}/all-questions`);
             const data = await response.json();
             setQuestions(shuffleArray(data));
         } catch (error) {
@@ -39,7 +40,7 @@ const Home = () => {
 
     const submitAnswer = async (option) => {
         try {
-            const response = await fetch(`${import.meta.env.VITE_BACKEND_ROUTE}/check-answer`, {
+            const response = await fetch(`${backendRoute}/check-answer`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -87,7 +88,7 @@ const Home = () => {
 
     const handleSubmitQuiz = async () => {
         try {
-            const response = await fetch(`${import.meta.env.VITE_BACKEND_ROUTE}/create`, {
+            const response = await fetch(`${backendRoute}/create`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

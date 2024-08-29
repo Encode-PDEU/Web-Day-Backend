@@ -8,6 +8,8 @@ const Admin = () => {
     const [error, setError] = useState('');
     const [leaderboard, setLeaderboard] = useState([]);
     const [LBButtonClicked, setLBButtonClicked] = useState(false);
+    const correctPassword = import.meta.env.VITE_ADMIN_PASSWORD;
+    const backendRoute = import.meta.env.VITE_BACKEND_ROUTE;
 
     useEffect(() => {
         setLBButtonClicked(false);
@@ -18,7 +20,7 @@ const Admin = () => {
     };
 
     const handleLogin = () => {
-        if (password === import.meta.env.VITE_ADMIN_PASSWORD) {
+        if (password === correctPassword) {
             setIsAuthenticated(true);
             setError('');
         } else {
@@ -28,7 +30,7 @@ const Admin = () => {
 
     const handleClearUsers = async () => {
         try {
-            await axios.delete(`${import.meta.env.VITE_BACKEND_ROUTE}/clear`);
+            await axios.delete(`${backendRoute}/clear`);
             alert('All users cleared successfully.');
             setLeaderboard([]); // Clear leaderboard after users are deleted
             setLBButtonClicked(true);
@@ -40,7 +42,7 @@ const Admin = () => {
 
     const handleShowLeaderboard = async () => {
         try {
-            const response = await axios.get(`${import.meta.env.VITE_BACKEND_ROUTE}/`);
+            const response = await axios.get(`${backendRoute}/`);
             setLeaderboard(response.data.users); // Update state with leaderboard data
             setLBButtonClicked(true);
         } catch (error) {
