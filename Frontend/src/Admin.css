@@ -81,15 +81,19 @@ h2, h3 {
 .leaderboard-button:hover {
     background-color: #218838;
 }
-
 .leaderboard-table {
     margin-top: 20px;
     width: 100%;
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    border: 1px solid #ddd; /* Optional: Add a border around the table for better visibility */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 600px; /* Ensure table doesn't shrink too much */
 }
 
 th, td {
