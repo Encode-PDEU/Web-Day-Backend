@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "../pages/Home";
 import { RouterProvider, createBrowserRouter, Routes, Route} from "react-router-dom"
-import Result from "../pages/Result";
+import Admin from "../pages/Admin";
 
 const router = createBrowserRouter([
   {
@@ -9,8 +9,8 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path: "/result",
-    element: <Result />
+    path: "/admin",
+    element: <Admin />
   }
 ])
 

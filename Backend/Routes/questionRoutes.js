@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { getRandomQuestion, checkAnswer } = require('../Controllers/questionController');
+const { getAllQuestions, checkAnswer } = require('../Controllers/questionController');
 
-router.get('/random-question', getRandomQuestion);
+router.get('/all-questions', getAllQuestions);
 
 router.post('/check-answer', checkAnswer);
 
